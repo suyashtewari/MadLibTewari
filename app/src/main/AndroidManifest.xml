@@ -4,12 +4,16 @@
 
     <application
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@mipmap/mad_libs"
         android:label="@string/app_name"
-        android:roundIcon="@mipmap/ic_launcher_round"
+        android:roundIcon="@mipmap/mad_libs_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".HorrorActivity"></activity>
+        <activity android:name=".DisplaySportActivity"></activity>
+        <activity android:name=".DisplayHorrorActivity" />
+        <activity android:name=".SportActivity" />
+        <activity android:name=".DisplayFunnyActivity" />
+        <activity android:name=".HorrorActivity" />
         <activity android:name=".FunnyActivity" />
         <activity android:name=".MainActivity">
             <intent-filter>

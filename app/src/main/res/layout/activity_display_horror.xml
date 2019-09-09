@@ -4,15 +4,16 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".HorrorActivity">
+    tools:context=".DisplayHorrorActivity">
 
-    <Button
-        android:id="@+id/createHorror"
+    <TextView
+        android:id="@+id/displayHorror"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="286dp"
-        android:text="Create"
+        android:layout_marginTop="108dp"
+        android:layout_marginEnd="114dp"
+        android:text="BOO"
+        android:textSize="60sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 </android.support.constraint.ConstraintLayout>

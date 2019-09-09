@@ -4,26 +4,151 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/second_color"
     tools:context=".FunnyActivity">
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/funnyTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="47dp"
-        android:text="Hello"
-        android:textSize="60sp"
+        android:layout_marginTop="@dimen/edit_value"
+        android:text="Enter:"
+        android:textSize="40sp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/create"
+        android:id="@+id/createFunny"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="314dp"
+        android:layout_marginTop="560dp"
+        android:layout_marginEnd="9dp"
+        android:onClick="sendInfo"
         android:text="create"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/share"
+        app:layout_constraintHorizontal_bias="0.50"
+        app:layout_constraintHorizontal_chainStyle="packed"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/funnyName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/edit_value"
+        android:background="@drawable/bubble_enter"
+        android:ems="10"
+        android:hint="name"
+        android:inputType="text"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/funnyTitle" />
+
+    <EditText
+        android:id="@+id/funnyPlace"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/edit_value"
+        android:background="@drawable/bubble_enter"
+        android:ems="10"
+        android:hint="place"
+        android:inputType="text"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/funnyName"
+        app:layout_constraintTop_toBottomOf="@+id/funnyName" />
+
+    <EditText
+        android:id="@+id/funnyAnimal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/edit_value"
+        android:background="@drawable/bubble_enter"
+        android:ems="10"
+        android:hint="animal"
+        android:inputType="text"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/funnyPlace"
+        app:layout_constraintTop_toBottomOf="@+id/funnyPlace" />
+
+    <EditText
+        android:id="@+id/funnyMotion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/edit_value"
+        android:background="@drawable/bubble_enter"
+        android:ems="10"
+        android:hint="verb (motion)"
+        android:inputType="text"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/funnyAnimal"
+        app:layout_constraintTop_toBottomOf="@+id/funnyAnimal" />
+
+    <EditText
+        android:id="@+id/adj1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/edit_value"
+        android:layout_marginEnd="1dp"
+        android:background="@drawable/bubble_enter"
+        android:ems="10"
+        android:hint="adjective"
+        android:inputType="textPersonName"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/funnyMotion"
+        app:layout_constraintTop_toBottomOf="@+id/funnyMotion" />
+
+    <EditText
+        android:id="@+id/adj2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/edit_value"
+        android:background="@drawable/bubble_enter"
+        android:ems="10"
+        android:hint="adjective"
+        android:inputType="text"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/adj1"
+        app:layout_constraintTop_toBottomOf="@+id/adj1" />
+
+    <EditText
+        android:id="@+id/verb2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="2dp"
+        android:layout_marginTop="@dimen/edit_value"
+        android:background="@drawable/bubble_enter"
+        android:ems="10"
+        android:hint="verb"
+        android:inputType="text"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/adj2"
+        app:layout_constraintTop_toBottomOf="@+id/adj2" />
+
+    <EditText
+        android:id="@+id/otherAnimal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/edit_value"
+        android:background="@drawable/bubble_enter"
+        android:ems="10"
+        android:hint="other animal"
+        android:inputType="text"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/verb2"
+        app:layout_constraintTop_toBottomOf="@+id/verb2" />
+
+    <Button
+        android:id="@+id/share"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="12dp"
+        android:text="share"
+        android:onClick="shareInfo"
+        app:layout_constraintBaseline_toBaselineOf="@+id/createFunny"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/createFunny" />
 </android.support.constraint.ConstraintLayout>

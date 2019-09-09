@@ -1,6 +1,8 @@
 package com.example.mad_libs;
 
 import android.content.Intent;
+import android.graphics.drawable.AnimationDrawable;
+import android.support.constraint.ConstraintLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -21,5 +23,24 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+        horror = (Button) findViewById(R.id.horror);
+        horror.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, HorrorActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        sports = (Button) findViewById(R.id.sports);
+        sports.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, SportActivity.class);
+                startActivity(intent);
+            }
+        });
+
     }
 }
